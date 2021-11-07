@@ -1,6 +1,7 @@
-from .base import Operations, BatchOperations
+from . import toimpl  # noqa
+from .base import BatchOperations
+from .base import Operations
 from .ops import MigrateOperation
-from . import toimpl
 
 
-__all__ = ['Operations', 'BatchOperations', 'MigrateOperation']
+__all__ = ["Operations", "BatchOperations", "MigrateOperation"]

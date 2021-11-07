@@ -1,4 +1,4 @@
-#!/home/moringa/Documents/Pitches/virtual/bin/python
+#!/home/moringa/Documents/Pitches/virtual/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

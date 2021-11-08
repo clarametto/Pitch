@@ -1,5 +1,5 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
+<nav class="navbar navbar-default" style="background-color: #3e3e3e;">
+    <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
           data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -8,7 +8,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">PITCHES</a>
+        <a class="" href="/">
+          <img src="https://res.cloudinary.com/clarametto-com/image/upload/v1636408787/clara-logo-rm_l0gyqe.png" alt="Clara Pitches" height="80px">
+        </a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
@@ -16,26 +18,26 @@
           <li class="">
             {% if current_user.is_authenticated %}
             <li class="nav-item">
-              <a id="create-acc" class="nav-link m-1" href="{{url_for('main.new_pitch')}}" style="border: 1px solid black;">Create Pitch</a>
+              <a class="nav-link m-1 text-light" href="{{url_for('main.new_pitch')}}" style="border: 1px solid black; color: white;">Create Pitch</a>
             </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle m-1" style="margin-right: 30px; border: 1px solid black;" data-toggle="dropdown" aria-haspopup="true"
+            <a class="nav-link dropdown-toggle m-1" style="margin-right: 30px; border: 1px solid black; color: white;" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               <i class="fas fa-user"></i>&nbsp; {{current_user.username}} </a>
             <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-              <a class="dropdown-item" href="{{url_for('main.profile',name=current_user.username)}}"><i
+              <a class="dropdown-item" style="color: white;" href="{{url_for('main.profile',name=current_user.username)}}"><i
                   class="far fa-user"></i>&nbsp; My account</a><br>
-              <a class="dropdown-item" href="{{url_for('auth.logout')}}"><i class="fas fa-sign-out-alt"></i>&nbsp; Log
+              <a class="dropdown-item" style="color: white;" href="{{url_for('auth.logout')}}"><i class="fas fa-sign-out-alt"></i>&nbsp; Log
                 out</a>
             </div>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{{url_for('auth.login')}}" style='margin-right:30px'><i
+            <a class="nav-link text-light" href="{{url_for('auth.login')}}" style='margin-right:30px; color: white;'><i
                 class="fas fa-sign-in-alt"></i>&nbsp; <strong>Log In</strong></a>
           </li>
           <li class="nav-item">
-            <a style='margin-right:30px' class="nav-link" href="{{url_for('auth.signup')}}"><i
+            <a style='margin-right:30px; color: white;' class="nav-link" href="{{url_for('auth.signup')}}"><i
                 class="fas fa-user-plus"></i></i>&nbsp; <strong>Sign Up</strong></a>
           </li>
           {%endif%}

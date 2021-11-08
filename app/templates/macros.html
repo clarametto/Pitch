@@ -2,21 +2,30 @@
 <div class="pitch">
   {% if pitches %}
   {% for pitch in pitches %}
-  <h3 class="title">{{pitch.title}}</h3>
-  <p>{{pitch.post}}</p>
-  <p>Category: {{pitch.category}}</p>
-  <p> Posted by: <span class="user">{{pitch.user.username}}</span> on: <small class="text-muted mr-2">{{ pitch.time.strftime('%Y-%m-%d') }}</small></p>
-  <div class="row actions">
-    <div class="col-md-4 comment">
-      <span>{{pitch.comment.count()}} <i class="fas fa-comment"></i> <a href="{{url_for('main.comment',pitch_id = pitch.id)}}">Add Comment</a></span>
+  <div class="card" style="border: 1px solid black; border-radius: 10px;">
+    <div class="card-body" style="padding-left: 20px; padding-right: 20px;">
+      <h3 class="card-title text-center">{{pitch.title}}</h3>
+      <p class="card-text">"{{pitch.post}}"</p>
+      <h6 class="card-subtitle mb-2 text-muted">Category: {{pitch.category}}</h6>
+      <p class="card-text">Posted by: <span class="user">{{pitch.user.username}}</span> on: <small class="text-muted mr-2">{{ pitch.time.strftime('%Y-%m-%d') }}</small></p>
+      <ul class="list-group list-group-flush">
+        <a href="{{url_for('main.comment',pitch_id = pitch.id)}}">
+          <li class="list-group-item text-center">{{pitch.comment.count()}} <i class="fas fa-comment"></i> Add Comment</li>
+        </a>
+      </ul>
+      <div class="row">
+    
+        <div class="col-md-6">
+          <span> <a class="btn rounded" style="color: seagreen; text-decoration: none;" href="{{url_for('main.like',id = pitch.id)}}"><i class="fa fa-thumbs-up"></i> Upvotes: {{pitch.upvote.count()}}</a></span>
+        </div>
+        <div class="col-md-6">
+          <span> <a class="btn rounded" style="color: red; text-decoration: none;" href="{{url_for('main.dislike',id = pitch.id)}}"> <i class="fa fa-thumbs-down"></i> Downvotes: {{pitch.downvote.count()}}</a></span>
+        </div>    
+      </div>
+      <br>
     </div>
-    <div class="col-md-4 upvote">
-      <span class="foot"> <a href="{{url_for('main.like',id = pitch.id)}}"><i class="fa fa-thumbs-up"></i> Upvotes: {{pitch.upvote.count()}}</a></span>
-    </div>
-    <div class="col-md-4 downvote">
-      <span class="foot"> <a href="{{url_for('main.dislike',id = pitch.id)}}"> <i class="fa fa-thumbs-down"></i> Downvotes: {{pitch.downvote.count()}}</a></span>
-    </div>    
   </div>
+  <br>
   {% endfor %}
   {% endif %}
 </div>

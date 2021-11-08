@@ -25,9 +25,9 @@
               aria-expanded="false">
               <i class="fas fa-user"></i>&nbsp; {{current_user.username}} </a>
             <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-              <a class="dropdown-item" style="color: white;" href="{{url_for('main.profile',name=current_user.username)}}"><i
+              <a class="dropdown-item" href="{{url_for('main.profile',name=current_user.username)}}"><i
                   class="far fa-user"></i>&nbsp; My account</a><br>
-              <a class="dropdown-item" style="color: white;" href="{{url_for('auth.logout')}}"><i class="fas fa-sign-out-alt"></i>&nbsp; Log
+              <a class="dropdown-item" style="color: red;" href="{{url_for('auth.logout')}}"><i class="fas fa-sign-out-alt"></i>&nbsp; Log
                 out</a>
             </div>
           </li>

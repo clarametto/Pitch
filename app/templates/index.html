@@ -10,30 +10,30 @@
 {% endblock %}
 
 {% block content %}
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <h3 class="bg-info text-center py-2 rounded text-danger">Fashion Pitches</h3>
-      <div id="fashion">
-        {{ macro.showPitch(fashion)}}
+<div style="background-color: rgba(229, 229, 229, 1);">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="text-center py-2 rounded text-danger">Fashion Pitches</h3>
+        <div id="fashion">
+          {{ macro.showPitch(fashion)}}
+        </div>
+        <h3 class="text-center py-2 rounded text-danger">Science Pitches</h3>
+        <div id="science">
+          {{ macro.showPitch(science) }}
+        </div>
       </div>
-      <h3 class="bg-info text-center py-2 rounded text-danger">Science Pitches</h3>
-      <div id="science">
-        {{ macro.showPitch(science) }}
-      </div>
-    </div>
-    <div class="col-md-6">
-      <h3 class="bg-info text-center py-2 rounded text-danger">Programming Pitches</h3>
-      <div id="programming">
-        {{ macro.showPitch(programming) }}
-      </div>
-      <h3 class="bg-info text-center py-2 rounded text-danger">Education Pitches</h3>
-      <div id="education">
-        {{ macro.showPitch(education) }}
+      <div class="col-md-6">
+        <h3 class="text-center py-2 rounded text-danger">Programming Pitches</h3>
+        <div id="programming">
+          {{ macro.showPitch(programming) }}
+        </div>
+        <h3 class="text-center py-2 rounded text-danger">Education Pitches</h3>
+        <div id="education">
+          {{ macro.showPitch(education) }}
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 {% endblock%}

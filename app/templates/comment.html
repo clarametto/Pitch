@@ -14,7 +14,7 @@
 
     {% if all_comments %}
     <div class="col-md-6">
-      <h4>All comments for the post</h4>
+      <h4 class="text-info">Comments for this post</h4>
       {% for comment in all_comments %}
       <div class="card w-90 mb-3">
         <div class="card-body">
@@ -33,7 +33,7 @@
   {%else%}
   <div class="card w-90 mb-3">
     <div>
-      <p>This pitch has no comment(s). Be the first to comment</p>
+      <p>This pitch has no comment(s). Be the first to drop a comment</p>
     </div>
   </div>
   <div class="col-md-5">

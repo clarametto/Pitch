@@ -1,5 +1,5 @@
 # PITCHES
-Flask News-Application
+
 
 ## Author
 Clara Metto
@@ -23,6 +23,8 @@ https://github.com/clarametto/Pitch.git```
 
 
 ## Technologies Used
+
+
 - Python
 -Flask
 - Bootstrap

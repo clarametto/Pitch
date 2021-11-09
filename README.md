@@ -19,7 +19,8 @@ This is an application where users will submit their sixty seconds pitch and the
 ### Setup / Installation
 * Git clone repo
 ```
-https://github.com/clarametto/Pitch.git```
+https://github.com/clarametto/Pitch.git
+```
 
 
 ## Technologies Used
@@ -54,7 +55,7 @@ zipp==3.6.0
 
 
 ### Sample Screenshots
-![Screenshot](https://images2.imgbox.com/b8/f0/mMjRIACL_o.png)
+![Screenshot](https://thumbs2.imgbox.com/68/f3/dh3OnZxT_t.png)
 
 
 ### Contact
